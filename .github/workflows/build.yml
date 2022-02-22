@@ -16,8 +16,8 @@ jobs:
       with:
         go-version: 1.17
 
-    - name: Build
+    - name: Compile
       run: go run -tags steps steps.go build
 
     - name: Test
-      run: go run -tags steps steps.go build
+      run: go run -tags steps steps.go test
