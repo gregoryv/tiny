@@ -14,10 +14,10 @@ func main() {
 	for _, target := range os.Args[1:] {
 		switch target {
 		case "build":
-			sh("go", "build", filepath.Join("cmd", "sayhi"))
+			sh("go", "build", filepath.Join(".", "cmd", "sayhi"))
 
 		case "test":
-			sh("go", "test", "...")
+			sh("go", "test", filepath.Join(".", "..."))
 
 		default:
 			fmt.Fprint(os.Stderr, "unknown target:", target)
