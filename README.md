@@ -1,15 +1,11 @@
-tiny - The Go + github get started project
+tiny - The Go + github getting started project
 
-Goals is to have a complete setup with pipelines in place for starting
-my next project.
+A complete "hello world" cross-platform setup with github build and
+release pipelines.
 
-## Quick start
-
-    $ go install github.com/gregoryv/tiny/cmd/sayhi@latest
-	
 ## Contribute
 
-Cross platform steps are defined in steps.go which pipelines use
+Steps are defined in steps.go which pipelines use
 
 Build 
 

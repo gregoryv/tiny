@@ -4,6 +4,8 @@
 package main
 
 import (
+	"bytes"
+	_ "embed"
 	"fmt"
 	"os"
 	"os/exec"
@@ -17,6 +19,13 @@ func main() {
 
 		case "test":
 			sh("go", "test", "./...")
+
+		case "dist":
+			os.MkdirAll("dist", 0755)
+			os.WriteFile("dist/release_notes.txt", releaseNotes(), 0644)
+
+		case "clear":
+			os.RemoveAll("dist")
 
 		default:
 			fmt.Fprint(os.Stderr, "unknown target:", target)
@@ -33,3 +42,17 @@ func sh(app string, args ...string) {
 		os.Exit(1)
 	}
 }
+
+// reelaseNotes returns last changelog section
+func releaseNotes() []byte {
+	h2 := []byte("## [")
+	from := bytes.Index(changelog, h2)
+	to := bytes.Index(changelog[from+len(h2):], h2)
+	if to == -1 { // only one
+		return changelog[from:]
+	}
+	return changelog[from : to+from]
+}
+
+//go:embed changelog.md
+var changelog []byte
