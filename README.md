@@ -1,6 +1,6 @@
 tiny - The Go + github getting started project
 
-A complete "hello world" cross-platform setup with github build and
+WIP: A complete "hello world" cross-platform setup with github build and
 release pipelines.
 
 ## Contribute
