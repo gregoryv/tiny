@@ -22,7 +22,8 @@ func main() {
 
 		case "dist":
 			os.MkdirAll("dist", 0755)
-			os.WriteFile("dist/release_notes.txt", releaseNotes(), 0644)
+			notes := "dist/release_notes.txt"
+			os.WriteFile(notes, releaseNotes(), 0644)
 
 		case "clear":
 			os.RemoveAll("dist")
@@ -43,7 +44,7 @@ func sh(app string, args ...string) {
 	}
 }
 
-// reelaseNotes returns last changelog section
+// reelaseNotes returns top changelog section
 func releaseNotes() []byte {
 	h2 := []byte("## [")
 	from := bytes.Index(changelog, h2)
@@ -53,6 +54,8 @@ func releaseNotes() []byte {
 	}
 	return changelog[from : to+from]
 }
+
+// Use the changelog for your release notes
 
 //go:embed changelog.md
 var changelog []byte
