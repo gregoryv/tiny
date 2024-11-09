@@ -5,6 +5,7 @@ notable changes to this project will be documented in this file.
 
 ## [0.2.0] - 2024-11-09
 
+- Update goreleaser template to version 2
 - Document ci.go
 - Bump Go to 1.23
 - Rename steps.go to ci.go
