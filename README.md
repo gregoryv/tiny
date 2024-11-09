@@ -5,7 +5,7 @@ tiny - The Go + github getting started project
   alternatives.
 - Use Go for [continuous integration](./ci.go) tasks
 - Automated [build](.github/workflows/build.yml) with github actions
-- Release with [release](.github/workflows/release.yml) flow and goreleaser
+- Release with [release](.github/workflows/release.yml) flow and [goreleaser](.goreleaser.yaml)
 
 
 ## Quickstart
