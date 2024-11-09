@@ -1,4 +1,4 @@
-tiny - The Go + github getting started project
+[tiny](https://pkg.go.dev/github.com/gregoryv/tiny) - The Go + github getting started project
 
 - Use basic repository layout with ./cmd
   See [Organizing Go Module](https://go.dev/doc/modules/layout), for
