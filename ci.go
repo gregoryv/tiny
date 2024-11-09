@@ -1,5 +1,4 @@
 //go:build ci
-// +build ci
 
 package main
 
@@ -12,6 +11,10 @@ import (
 )
 
 func main() {
+	// Similar to a make it should normalize How to accomplish
+	// specific steps. Developers can use this locally but the
+	// intention is to implement steps here and trigger them from
+	// whatever pipeline stack you are using.
 	for _, target := range os.Args[1:] {
 		switch target {
 		case "build":
@@ -21,6 +24,10 @@ func main() {
 			sh("go", "test", "./...")
 
 		case "dist":
+			// one example where a step is more complicated than a
+			// simple, cat | grep | sed.  The release notes in this
+			// project are the same as the top section in our
+			// changelog file.
 			os.MkdirAll("dist", 0755)
 			notes := "dist/release_notes.txt"
 			os.WriteFile(notes, releaseNotes(), 0644)

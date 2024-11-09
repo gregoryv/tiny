@@ -1,4 +1,3 @@
-// Command tiny greets people
 package main
 
 import "testing"
