@@ -1,8 +1,13 @@
 # Changelog
-All notable changes to this project will be documented in this file.
 
-The format is based on http://keepachangelog.com/en/1.0.0/
-and this project adheres to http://semver.org/spec/v2.0.0.html.
+A This project adheres to http://semver.org/spec/v2.0.0.html and all
+notable changes to this project will be documented in this file.
+
+## [0.2.0] - 2024-11-09
+
+- Document ci.go
+- Bump Go to 1.23
+- Rename steps.go to ci.go
 
 ## [0.1.0] - 2022-04-16
 
