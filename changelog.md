@@ -3,6 +3,10 @@
 A This project adheres to http://semver.org/spec/v2.0.0.html and all
 notable changes to this project will be documented in this file.
 
+## [0.2.1-dev]
+
+- Fix func releaseNotes; missing last bytes
+
 ## [0.2.0] - 2024-11-09
 
 - Update goreleaser template to version 2

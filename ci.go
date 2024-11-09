@@ -55,14 +55,13 @@ func sh(app string, args ...string) {
 func releaseNotes() []byte {
 	h2 := []byte("## [")
 	from := bytes.Index(changelog, h2)
-	to := bytes.Index(changelog[from+len(h2):], h2)
-	if to == -1 { // only one
-		return changelog[from:]
+	to := bytes.Index(changelog[from+len(h2):], h2) + len(h2)
+	notes := changelog[from:]
+	if to > 0 {
+		notes = changelog[from : from+to]
 	}
-	return changelog[from : to+from]
+	return bytes.TrimSpace(notes)
 }
-
-// Use the changelog for your release notes
 
 //go:embed changelog.md
 var changelog []byte
