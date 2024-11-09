@@ -1,5 +1,5 @@
-//go:build steps
-// +build steps
+//go:build ci
+// +build ci
 
 package main
 
