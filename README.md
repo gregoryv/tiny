@@ -6,7 +6,7 @@
 - Use Go for [continuous integration](./ci.go) tasks
 - Automated [build](.github/workflows/build.yml) with github actions
 - Release with [release](.github/workflows/release.yml) flow and [goreleaser](.goreleaser.yaml)
-
+- Including [MIT license](license.txt)
 
 ## Quickstart
 
