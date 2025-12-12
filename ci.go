@@ -51,7 +51,7 @@ func sh(app string, args ...string) {
 	}
 }
 
-// reelaseNotes returns top changelog section
+// releaseNotes returns top changelog section
 func releaseNotes() []byte {
 	h2 := []byte("## [")
 	from := bytes.Index(changelog, h2)

@@ -3,7 +3,7 @@
 A This project adheres to http://semver.org/spec/v2.0.0.html and all
 notable changes to this project will be documented in this file.
 
-## [0.2.1-dev]
+## [0.2.1] - 2025-12-12
 
 - Fix func releaseNotes; missing last bytes
 
